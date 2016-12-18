@@ -3,7 +3,7 @@
 	url = git@github.com:pangliang/oh-my-zsh.git
 [submodule "oh-my-vim"]
 	path = oh-my-vim
-	url = https://github.com/pangliang/oh-my-vim.git
+	url = git@github.com:pangliang/oh-my-vim.git
 [submodule "oh-my-tmux"]
 	path = oh-my-tmux
-	url = https://github.com/pangliang/oh-my-tmux.git
+	url = git@github.com:pangliang/oh-my-tmux.git
