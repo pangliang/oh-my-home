@@ -2,17 +2,23 @@
 
 # env
 PWD=`pwd`
+APT='sudo apt-get'
+
 
 # cygwin
 if [[ $(uname) =~ 'CYGWIN' ]];then
-	rm /bin/apt-get ~/.minttyrc
-	ln -s $PWD/cygwin/apt-cyg /bin/apt-get
+	APT='apt-cyg'
+	rm ~/.minttyrc
 	ln -s $PWD/cygwin/minttyrc ~/.minttyrc
 fi
 
+# macos
+if [[ $(uname) =~ 'Darwin' ]];then
+	APT='brew'
+fi
 
 # git
-sudo apt-get install git
+sudo $APT install git
 
 git config --global user.email "418094911@qq.com"
 git config --global user.name "pangliang"
@@ -26,7 +32,7 @@ git submodule foreach git pull origin master
 git submodule foreach git checkout master
 
 # vim
-sudo apt-get install vim lua
+$APT install vim lua
 
 rm -rf ~/.vim ~/.vimrc
 
@@ -35,7 +41,7 @@ ln -s ~/.vim/vimrc ~/.vimrc
 vim +PluginInstall +qall
 
 # zsh
-sudo apt-get install zsh
+$APT install zsh
 
 rm -rf ~/.oh-my-zsh ~/.zshrc
 
@@ -43,7 +49,7 @@ ln -s $PWD/oh-my-zsh ~/.oh-my-zsh
 cp -rf ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 
 # tmux
-sudo apt-get install tmux
+$APT install tmux
 rm -rf ~/.tmux ~/.tmux.conf ~/.tmux.conf.local
 
 ln -s $PWD/oh-my-tmux ~/.tmux
