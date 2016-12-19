@@ -44,6 +44,7 @@ ln -s $PWD/oh-my-zsh ~/.oh-my-zsh
 cp -rf ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 
 # tmux
+apt-get install tmux
 rm -rf ~/.tmux ~/.tmux.conf ~/.tmux.conf.local
 
 ln -s $PWD/oh-my-tmux ~/.tmux
