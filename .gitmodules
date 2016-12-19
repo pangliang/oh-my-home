@@ -1,9 +1,9 @@
 [submodule "oh-my-zsh"]
 	path = oh-my-zsh
-	url = git@github.com:pangliang/oh-my-zsh.git
+	url = http://github.com/pangliang/oh-my-zsh.git
 [submodule "oh-my-vim"]
 	path = oh-my-vim
-	url = git@github.com:pangliang/oh-my-vim.git
+	url = http://github.com/pangliang/oh-my-vim.git
 [submodule "oh-my-tmux"]
 	path = oh-my-tmux
-	url = git@github.com:pangliang/oh-my-tmux.git
+	url = http://github.com/pangliang/oh-my-tmux.git

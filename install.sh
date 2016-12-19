@@ -36,6 +36,8 @@ ln -s ~/.vim/vimrc ~/.vimrc
 vim +PluginInstall +qall
 
 # zsh
+apt-get install zsh
+
 rm -rf ~/.oh-my-zsh ~/.zshrc
 
 ln -s $PWD/oh-my-zsh ~/.oh-my-zsh
