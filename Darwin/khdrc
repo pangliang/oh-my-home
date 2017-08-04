@@ -1,0 +1,46 @@
+# reload config
+cmd + alt - r : khd -e "reload"
+
+# focus window
+alt - j : chunkc tiling::window --focus west
+alt - k : chunkc tiling::window --focus south
+alt - i : chunkc tiling::window --focus north
+alt - l : chunkc tiling::window --focus east
+alt - tab : chunkc tiling::window --focus next
+
+# equalize size of windows
+shift + alt - 0 : chunkc tiling::desktop --equalize
+
+# move floating windows / windows on a floating space
+alt - w : chunkc tiling::window --warp-floating fullscreen
+alt - a : chunkc tiling::window --warp-floating left
+alt - d : chunkc tiling::window --warp-floating right
+
+# focus monitor 
+alt - 1  : chunkc tiling::monitor -f 1
+alt - 2  : chunkc tiling::monitor -f 2
+
+# send window to monitor and follow focus
+alt - p : `id=$(chunkc tiling::query --monitor id); tid=$(( $id^3  )); chunkc tiling::window --send-to-monitor $tid; chunkc tiling::monitor -f $tid &>/dev/null`
+
+# toggle window fullscreen
+alt - f : chunkc tiling::window --toggle fullscreen
+
+# toggle window native fullscreen
+shift + alt - f : chunkc tiling::window --toggle native-fullscreen
+
+# toggle window parent zoom
+alt - d : chunkc tiling::window --toggle parent
+
+# float / unfloat window
+alt - t : chunkc tiling::window --toggle float
+
+# change layout of desktop
+ctrl + alt - a : chunkc tiling::desktop --layout bsp
+ctrl + alt - s : chunkc tiling::desktop --layout monocle
+ctrl + alt - d : chunkc tiling::desktop --layout float
+
+# remap caps-lock to escape for this config only !!!
+# macos sierra can also perform this remap for a given keyboard
+- capslock : khd -p "- escape"
+
