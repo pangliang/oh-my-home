@@ -40,7 +40,4 @@ ctrl + alt - a : chunkc tiling::desktop --layout bsp
 ctrl + alt - s : chunkc tiling::desktop --layout monocle
 ctrl + alt - d : chunkc tiling::desktop --layout float
 
-# remap caps-lock to escape for this config only !!!
-# macos sierra can also perform this remap for a given keyboard
-- capslock : khd -p "- escape"
 
