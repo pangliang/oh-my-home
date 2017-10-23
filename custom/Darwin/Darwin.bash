@@ -1,4 +1,6 @@
 
+APT="brew"
+
 echo "install chunkwn ..."
 brew tap crisidev/homebrew-chunkwm
 brew install chunkwm

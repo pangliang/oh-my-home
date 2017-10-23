@@ -15,6 +15,16 @@ shift + alt - 0 : chunkc tiling::desktop --equalize
 alt - w : chunkc tiling::window --warp-floating fullscreen
 alt - a : chunkc tiling::window --warp-floating left
 alt - d : chunkc tiling::window --warp-floating right
+alt - s : chunkc tiling::window --warp-floating 10:10:1:0:8:10
+
+alt - q : chunkc tiling::window --warp-floating 10:10:0:0:5:5
+alt - e : chunkc tiling::window --warp-floating 10:10:5:0:5:5
+alt - z : chunkc tiling::window --warp-floating 10:10:0:5:5:5
+alt - c : chunkc tiling::window --warp-floating 10:10:5:5:5:5
+
+
+
+
 
 # focus monitor 
 alt - 1  : chunkc tiling::monitor -f 1

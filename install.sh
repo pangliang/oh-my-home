@@ -2,21 +2,17 @@
 
 # env
 PWD=`pwd`
-APT='sudo apt-get'
 
-
-# cygwin
-if [[ $(uname) =~ 'CYGWIN' ]];then
-	APT='apt-cyg'
-fi
-
-# macos
-if [[ $(uname) =~ 'Darwin' ]];then
-	APT='brew'
+# os custom
+os=`uname`
+customfile="custom/$os/$os.bash"
+if [ -f "$customfile" ]
+then
+	source $customfile 
 fi
 
 # git
-sudo $APT install git
+$APT install git
 
 # modules update
 git submodule init
@@ -50,10 +46,5 @@ rm -rf ~/.tmux ~/.tmux.conf ~/.tmux.conf.local
 ln -s $PWD/oh-my-tmux ~/.tmux
 ln -s ~/.tmux/.tmux.conf ~/.tmux.conf
 ln -s ~/.tmux/.tmux.conf.local ~/.tmux.conf.local
-
-# os custom
-
-os=`uname`
-source $os/$os.bash
 
 
