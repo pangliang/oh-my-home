@@ -1,2 +1,2 @@
 
-APT="apt"
+APT="apt -y"
