@@ -12,15 +12,14 @@ alt - tab : chunkc tiling::window --focus next
 shift + alt - 0 : chunkc tiling::desktop --equalize
 
 # move floating windows / windows on a floating space
-alt - w : chunkc tiling::window --warp-floating fullscreen
-alt - a : chunkc tiling::window --warp-floating left
-alt - d : chunkc tiling::window --warp-floating right
-alt - s : chunkc tiling::window --warp-floating 10:10:1:0:8:10
-
-alt - q : chunkc tiling::window --warp-floating 10:10:0:0:5:5
-alt - e : chunkc tiling::window --warp-floating 10:10:5:0:5:5
-alt - z : chunkc tiling::window --warp-floating 10:10:0:5:5:5
-alt - c : chunkc tiling::window --warp-floating 10:10:5:5:5:5
+alt - w : chunkc tiling::window --grid-layout 1:1:0:0:1:1
+alt - a : chunkc tiling::window --grid-layout 1:2:0:0:1:1
+alt - d : chunkc tiling::window --grid-layout 1:2:1:0:1:1
+alt - s : chunkc tiling::window --grid-layout 10:10:1:0:8:10
+alt - q : chunkc tiling::window --grid-layout 10:10:0:0:5:5
+alt - e : chunkc tiling::window --grid-layout 10:10:5:0:5:5
+alt - z : chunkc tiling::window --grid-layout 10:10:0:5:5:5
+alt - c : chunkc tiling::window --grid-layout 10:10:5:5:5:5
 
 
 
