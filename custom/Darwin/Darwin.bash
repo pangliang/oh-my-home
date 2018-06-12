@@ -12,3 +12,5 @@ ln -s $PWD/Darwin/khdrc ~/.khdrc
 brew services restart crisidev/chunkwm/chunkwm
 brew services restart khd
 
+# copy to OS clipboard
+brew install reattach-to-user-namespace
