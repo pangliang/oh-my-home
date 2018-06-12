@@ -1,13 +1,14 @@
-#1/bin/bash
+#!/bin/bash
 
 # env
 PWD=`pwd`
 
 # os custom
 os=`uname`
-customfile="custom/$os/$os.bash"
+customfile="$PWD/custom/$os/$os.bash"
 if [ -f "$customfile" ]
 then
+	echo "load custom file $customfile"
 	source $customfile 
 fi
 
