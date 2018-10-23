@@ -22,9 +22,11 @@ git submodule foreach git submodule init
 git submodule foreach git submodule update
 git submodule foreach git pull origin master
 git submodule foreach git checkout master
+git submodule foreach git submodule foreach git pull origin master
+
 
 # vim
-$APT install vim lua
+$APT install vim lua5.1 luajit
 
 rm -rf ~/.vim ~/.vimrc
 
