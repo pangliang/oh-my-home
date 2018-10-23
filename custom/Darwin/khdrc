@@ -22,6 +22,17 @@ alt - e : chunkc tiling::window --grid-layout 2:2:1:0:1:1
 alt - z : chunkc tiling::window --grid-layout 2:2:0:1:1:1
 alt - c : chunkc tiling::window --grid-layout 2:2:1:1:1:1
 
+# increase region size
+shift + alt - a : chunkc tiling::window --use-temporary-ratio 0.1 --adjust-window-edge west
+shift + alt - s : chunkc tiling::window --use-temporary-ratio 0.1 --adjust-window-edge south
+shift + alt - w : chunkc tiling::window --use-temporary-ratio -0.1 --adjust-window-edge south
+shift + alt - d : chunkc tiling::window --use-temporary-ratio -0.1 --adjust-window-edge west
+
+# decrease region size
+shift + alt - j : chunkc tiling::window --use-temporary-ratio -0.1 --adjust-window-edge east
+shift + alt - k : chunkc tiling::window --use-temporary-ratio -0.1 --adjust-window-edge north
+shift + alt - i : chunkc tiling::window --use-temporary-ratio 0.1 --adjust-window-edge north
+shift + alt - l : chunkc tiling::window --use-temporary-ratio 0.1 --adjust-window-edge east
 
 # focus monitor 
 alt - 1  : chunkc tiling::monitor -f 1
