@@ -2,10 +2,10 @@
 cmd + alt - r : khd -e "reload"
 
 # focus window
-alt - j : chunkc tiling::window --focus west
-alt - k : chunkc tiling::window --focus south
-alt - i : chunkc tiling::window --focus north
-alt - l : chunkc tiling::window --focus east
+#alt - j : chunkc tiling::window --focus west
+#alt - k : chunkc tiling::window --focus south
+#alt - i : chunkc tiling::window --focus north
+#alt - l : chunkc tiling::window --focus east
 alt - tab : chunkc tiling::window --focus next
 
 # equalize size of windows
@@ -42,7 +42,7 @@ alt - 2  : chunkc tiling::monitor -f 2
 alt - p : `id=$(chunkc tiling::query --monitor id); tid=$(( $id^3  )); chunkc tiling::window --send-to-monitor $tid; chunkc tiling::monitor -f $tid &>/dev/null`
 
 # toggle window fullscreen
-alt - f : chunkc tiling::window --toggle fullscreen
+ctrl - f : chunkc tiling::window --toggle fullscreen
 
 # toggle window native fullscreen
 shift + alt - f : chunkc tiling::window --toggle native-fullscreen
@@ -51,7 +51,7 @@ shift + alt - f : chunkc tiling::window --toggle native-fullscreen
 alt - d : chunkc tiling::window --toggle parent
 
 # float / unfloat window
-alt - t : chunkc tiling::window --toggle float
+#alt - t : chunkc tiling::window --toggle float
 
 # change layout of desktop
 ctrl + alt - a : chunkc tiling::desktop --layout bsp

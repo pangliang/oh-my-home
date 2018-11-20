@@ -47,7 +47,7 @@ chunkc set window_region_locked          1
 #
 # chunkc set mouse_modifier              \"cmd shift\"
 chunkc set mouse_modifier                fn
-
+chunkc set mouse_move_window			 \"ctrl 2\"
 chunkc set preselect_border_color        0xffffff00
 chunkc set preselect_border_width        4
 chunkc set preselect_border_radius       0
