@@ -35,11 +35,14 @@ shift + alt - i : chunkc tiling::window --use-temporary-ratio 0.1 --adjust-windo
 shift + alt - l : chunkc tiling::window --use-temporary-ratio 0.1 --adjust-window-edge east
 
 # focus monitor 
-alt - 1  : chunkc tiling::monitor -f 1
-alt - 2  : chunkc tiling::monitor -f 2
+#alt - 1  : chunkc tiling::monitor -f 1
+#alt - 2  : chunkc tiling::monitor -f 2
 
 # send window to monitor and follow focus
 alt - p : `id=$(chunkc tiling::query --monitor id); tid=$(( $id^3  )); chunkc tiling::window --send-to-monitor $tid; chunkc tiling::monitor -f $tid &>/dev/null`
+
+# send window to next desktop
+ctrl - p : `id=$(chunkc tiling::query --window id); chunkc tiling::window --send-to-desktop next; chunkc tiling::window --focus $id &>/dev/null`
 
 # toggle window fullscreen
 ctrl - f : chunkc tiling::window --toggle fullscreen
