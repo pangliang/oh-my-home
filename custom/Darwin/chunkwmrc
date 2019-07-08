@@ -73,6 +73,16 @@ chunkc set focused_border_radius         4
 chunkc set focused_border_skip_floating  0
 
 #
+# 特定软件固定desktop
+chunkc tiling::rule --owner \"IntelliJ IDEA\" --desktop 1
+chunkc tiling::rule --owner \"Google Chrome\" --desktop 1
+chunkc tiling::rule --owner 钉钉 --desktop 2
+chunkc tiling::rule --owner 微信 --desktop 2
+chunkc tiling::rule --owner iTerm2 --desktop 3
+chunkc tiling::rule --owner 访达 --desktop 3
+chunkc tiling::rule --owner Sourcetree --desktop 4
+
+#
 # NOTE: specify plugins to load when chunkwm starts.
 #       if chunkc plugin_dir is not set, the absolutepath is necessary.
 #
