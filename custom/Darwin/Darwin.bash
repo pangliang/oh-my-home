@@ -6,7 +6,7 @@ brew tap crisidev/homebrew-chunkwm
 brew install chunkwm
 brew install koekeishiya/formulae/skhd
 rm ~/.chunkwmrc
-ln -s $PWD/custom/Darwin/chunkwmrc ~/.chunkwmrc 
+ln -s $PWD/custom/Darwin/yabairc ~/.yabairc 
 rm ~/.skhdrc
 ln -s $PWD/custom/Darwin/skhdrc ~/.skhdrc 
 brew services restart crisidev/chunkwm/chunkwm
