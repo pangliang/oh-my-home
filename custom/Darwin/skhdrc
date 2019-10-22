@@ -8,9 +8,6 @@ cmd + alt - r : khd -e "reload"
 #alt - l : yabai -m window --focus east
 alt - tab : yabai -m window --focus next
 
-# equalize size of windows
-shift + alt - 0 : yabai -m space --balance
-
 # move floating windows / windows on a floating space
 alt - w : yabai -m window --grid 1:1:0:0:1:1
 alt - a : yabai -m window --grid 1:2:0:0:1:1
@@ -44,4 +41,13 @@ ctrl - f : yabai -m window --toggle zoom-fullscreen
 ctrl + alt - a : yabai -m space --layout bsp
 ctrl + alt - d : yabai -m space --layout float
 
+# 重新放置app到各个space
+shift + alt - 0 : yabai -m rule --add app=iTerm2 space=3 \
+                    && yabai -m rule --add app=钉钉 space=2 \
+                    && yabai -m rule --add app=微信 space=2 \
+					&& yabai -m rule --add app=Sourcetree space=5 \
+					&& yabai -m rule --add app=访达 space=4 \
+					&& yabai -m space --balance
+
+shift + alt - 9 : yabai -m space --rotate 90
 
