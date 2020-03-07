@@ -70,18 +70,18 @@ conky.config ={
 
 
 conky.text = [[
-${alignr}${color1}${font Montserrat Bold:size=20}${time %H:%M:%S}${font}${color}${alignr}
+${alignc}${color1}${font Montserrat Bold:size=20}${time %H:%M:%S}${font}${color}${alignr}
 ${voffset -9}
-${alignr}${font :size=10}${time %A %d %B %Y}${font}${alignr}
+${alignc}${font :size=10}${time %A %d %B %Y}${font}${alignr}
 ${color6}${hr 2}${color} 
-${font :size=8}${color1}KERNEL:${color}${font}  $kernel ${alignr}$machine
+${font :size=8}${color1}KERNEL:${color}${font} ${alignr} $kernel ${alignr}$machine
 ${font :size=8}${color1}UPTIME:${color}${font} ${alignr}$uptime_short
 ${font :size=8}${color1}SYSTEM:${color}${font} ${alignr}Linux Mint 19.1 MATE
 
 ${voffset -35}
 ${color6}${hr 2}
-${font :size=11}${color1}CPUs ${color6}${alignr}${font :size=10}AMD Ryzen 9 3900X ${freq_g} GHz${color}
-${color4}${cpugraph 15,300, F600AA 5000a0}
+${font :size=11}${color6}CPUs ${color1}${alignr}${font :size=10}AMD Ryzen 9 3900X ${freq_g} GHz
+${color4}${cpugraph 40,280 F600AA 5000a0}
 ${voffset -30}
 ${font :size=8}${color1}01 - 04:${color}${font} ${goto 100}${cpu cpu1}% ${goto 150}${cpu cpu2 }% ${goto 200}${cpu cpu3 }% ${goto 250}${cpu cpu4 }%
 ${voffset -25}
@@ -95,36 +95,33 @@ ${font :size=8}${color1}17 - 20:${color}${font} ${goto 100}${cpu cpu17}% ${goto 
 ${voffset -25}
 ${font :size=8}${color1}21 - 24:${color}${font} ${goto 100}${cpu cpu21}% ${goto 150}${cpu cpu22}% ${goto 200}${cpu cpu23}% ${goto 250}${cpu cpu24}%
 ${voffset -15}
-${font :size=8}${color1}CPU TEMPS:${color}${font} ${font :size=10}${alignr}${hwmon 0 temp 1}°${color4}C${color} ${hwmon 0 temp 2}°${color4}C${color}
+${font :size=8}${color1}CPU TEMPS:${color}${font} ${font :size=10}${alignr}${hwmon 0 temp 1}°${color4}C${color} ${hwmon 0 temp 2}°${color4}C
 
 ${voffset -35}
 ${color6}${hr 2}
-${font :size=11}${color1}MEMORY ${color6}${alignr} ${mem}/$memmax${color}
+${font :size=11}${color6}MEMORY ${color1}${alignr} ${mem}/$memmax
 ${font :size=8}${color1}RAM :${color}${font} ${goto 100}$memperc% ${goto 150}${font :size=8}${color1}SWAP :${color}${font} ${alignr}$swapperc%
-${color4}${memgraph 15,300, 32CD32 8B0000 -t}${color}
+${color4}${memgraph 40,280, 32CD32 8B0000}
 
-${font :size=11}${color1}NETWORK ${color6}${hr 2}${color}
-${voffset -15}
-${font :size=8}${color1}LAN IP ADDR:${color}${font} ${alignr}${addr wlp4s0}
-${font :size=10}${color1}UP:   ${alignr}${color}${font}${upspeedf wlp4s0}k/s (${totalup wlp4s0})
-${font :size=10}${color1}DOWN: ${alignr}${color}${font} ${downspeedf wlp4s0}k/s (${totaldown wlp4s0})
-${voffset -15}
-${font :size=8}${color1}UPLOAD: ${color}${font} ${goto 80}${color4}${upspeedgraph wlp4s0 15,210 ADFF2F 32CD32 }${color}
-${voffset -25}
-${font :size=8}${color1}DOWN:${color}${font} ${goto 80}${color4}${downspeedgraph wlp4s0 15,210 FF0000 8B0000 }${color}
-
-${font :size=11}${color1}DISKS ${color6}${hr 2}${color}
-${voffset -15}
-${font :size=10}${font :size=8}${color1}HD HOME:${color}${font} ${goto 100}${fs_used /home} ${color4}/${color} ${fs_size /home} ${alignr} ${fs_free_perc /home}%${font}
-${voffset -25}
-${font :size=8}${color1}DISK I/O:${color}${font} ${alignr}$diskio
-${voffset -15}
-${font :size=8}${color1}READ: ${color}${font} ${goto 80}${color4}${diskiograph_read  15,210 ADFF2F 32CD32 750}${color}
-${voffset -25}
-${font :size=8}${color1}WRITE:${color}${font} ${goto 80}${color4}${diskiograph_write 15,210 FF0000 8B0000 750}${color}
-${voffset -6}
+${voffset -35}
 ${color6}${hr 2}
-${font :size=11}${color1}PROCESSES ${color6}${alignr}${processes} ${color4}${font :size=8}processes${font}${color}${font}${color}
+${font :size=11}${color6}NETWORK ${color1}${alignr} ${addr wlp4s0}
+${voffset -25}
+${color4}${upspeedgraph wlp4s0 40,140 FFFF00 DD3A21} ${alignr}${downspeedgraph wlp4s0 40,140 06E9F8 2104FA}
+${voffset -35}
+${color}${font}↑ ${upspeed wlp4s0} ${goto 150}${color}${font} ↓ ${downspeed wlp4s0}
+
+${font :size=11}${color1}DISKS ${color6}${hr 2}
+${voffset -15}
+${font}${color1}HD ROOT: ${color} ${goto 100}${fs_used /} ${color4}/${color} ${fs_size /} ${alignr} ${fs_free_perc /}%
+${font}${color1}HD WING: ${color} ${goto 100}${fs_used /mnt/win_g} ${color4}/${color} ${fs_size /mnt/win_g} ${alignr} ${fs_free_perc /mnt/win_g}%
+${voffset -15}
+${color4}${diskiograph_read 40,140 FFFF00 DD3A21} ${alignr}${diskiograph_write 40,140 06E9F8 2104FA}
+${voffset -35}
+${color}${font}R: ${diskio_read} ${goto 150}${color}${font}W: ${diskio_write}
+
+${color6}${hr 2}
+${font :size=11}${color1}PROCESSES ${color6}${alignr}${processes} ${color4}${font :size=8}processes
 ${voffset -15}
 ${font :size=9}${color1}${top_mem name 1} ${color}${font} ${goto 160}${top mem 1} % ${goto 235}${top cpu 1} %
 ${font :size=9}${color1}${top_mem name 2} ${color}${font} ${goto 160}${top mem 2} % ${goto 235}${top cpu 2} %
