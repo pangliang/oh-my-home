@@ -29,17 +29,17 @@ conky.config ={
   border_inner_margin = 0,
   border_width = 5, 
 
-  minimum_height = 5000,
+  minimum_height = 100,
 
   minimum_width = 280,
   maximum_width = 280,
 
-  alignment = 'top_right',
+  alignment = 'tr',
   gap_x = 10,
-  gap_y = 15,
+  gap_y = 50,
 
   -- GRAPHICS SETTINGS
-  draw_shades = false,
+  draw_shades = true,
   draw_outline = true,
   draw_borders = false,
   draw_graph_borders = true,
@@ -116,24 +116,34 @@ ${color}${font}UP: ${upspeed wlp4s0} ${goto 150}${color}${font}DOWN: ${downspeed
 ${voffset -35}
 ${color6}${hr 1}
 ${font :size=11}${color1}DISKS:
-${voffset -15}
-${font}${color1}HD ROOT: ${color} ${goto 100}${fs_used /} ${color4}/${color} ${fs_size /} ${alignr} ${fs_free_perc /}%
-${font}${color1}HD WING: ${color} ${goto 100}${fs_used /mnt/win_g} ${color4}/${color} ${fs_size /mnt/win_g} ${alignr} ${fs_free_perc /mnt/win_g}%
+${voffset -25}
+${font :size=8}${color1}root: ${color} ${goto 130}${fs_used /} ${color4}/${color} ${fs_size /} ${alignr} ${fs_used_perc /}%
+${color6}${fs_bar 5,280 /}
+${font :size=8}${color1}win_g: ${color} ${goto 130}${fs_used /mnt/win_g} ${color4}/${color} ${fs_size /mnt/win_g} ${alignr} ${fs_used_perc /mnt/win_g}%
+${color6}${fs_bar 5,280 /mnt/win_g}
 ${voffset -15}
 ${color4}${diskiograph_read 40,140 FFFF00 DD3A21} ${alignr}${diskiograph_write 40,140 06E9F8 2104FA}
-${voffset -35}
+${voffset -25}
 ${color}${font}R: ${diskio_read} ${goto 150}${color}${font}W: ${diskio_write}
 
 ${color6}${hr 2}
-${font :size=11}${color6}PROCESSES: ${alignr}${color1}${running_processes}/${processes} ${color4}${font :size=8}processes
+${font :size=11}${color6}PROCESSES: ${color1}${alignr}${running_processes} ${color4}/${color} ${processes} ${color4}${font :size=8}
 ${voffset -15}
 ${font :size=9}${color1}${top name 1} ${color}${font} ${goto 160}${top cpu 1} % ${goto 230}${top mem 1} %
 ${font :size=9}${color1}${top name 2} ${color}${font} ${goto 160}${top cpu 2} % ${goto 230}${top mem 2} %
 ${font :size=9}${color1}${top name 3} ${color}${font} ${goto 160}${top cpu 3} % ${goto 230}${top mem 3} %
 ${font :size=9}${color1}${top name 4} ${color}${font} ${goto 160}${top cpu 4} % ${goto 230}${top mem 4} %
 ${font :size=9}${color1}${top name 5} ${color}${font} ${goto 160}${top cpu 5} % ${goto 230}${top mem 5} %
-${font :size=9}${color1}${top name 6} ${color}${font} ${goto 160}${top cpu 6} % ${goto 230}${top mem 6} %
-${font :size=9}${color1}${top name 7} ${color}${font} ${goto 160}${top cpu 7} % ${goto 230}${top mem 7} %
+
+${font :size=9}${color1}${top_mem name 1} ${color}${font} ${goto 160}${top_mem cpu 1} % ${goto 230}${top_mem mem 1} %
+${font :size=9}${color1}${top_mem name 2} ${color}${font} ${goto 160}${top_mem cpu 2} % ${goto 230}${top_mem mem 2} %
+${font :size=9}${color1}${top_mem name 3} ${color}${font} ${goto 160}${top_mem cpu 3} % ${goto 230}${top_mem mem 3} %
+${font :size=9}${color1}${top_mem name 4} ${color}${font} ${goto 160}${top_mem cpu 4} % ${goto 230}${top_mem mem 4} %
+${font :size=9}${color1}${top_mem name 5} ${color}${font} ${goto 160}${top_mem cpu 5} % ${goto 230}${top_mem mem 5} %
+
+${font :size=9}${color1}${top_io name 1} ${color}${font} ${goto 160}${top_io io_perc 1} % ${goto 230}${top_io cpu 1} %
+${font :size=9}${color1}${top_io name 2} ${color}${font} ${goto 160}${top_io io_perc 2} % ${goto 230}${top_io cpu 2} %
+${font :size=9}${color1}${top_io name 3} ${color}${font} ${goto 160}${top_io io_perc 3} % ${goto 230}${top_io cpu 3} %
 
 ${voffset 10}
 ]];
