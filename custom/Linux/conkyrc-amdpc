@@ -103,7 +103,7 @@ ${font :size=8}${color1}CPU TEMPS:${color}${font} ${font :size=10}${alignr}${hwm
 ${voffset -35}
 ${color6}${hr 1}
 ${font :size=11}${color6}MEMORY: ${color1}${font :size=10}${alignr} ${mem} ${color4}/${color} $memmax ${color4}/${color} ${memperc}%
-${color4}${memgraph 40,280 32CD32 8B0000}
+${color4}${memgraph 40,280 FFFF00 DD3A21}
 
 ${voffset -35}
 ${color6}${hr 1}
