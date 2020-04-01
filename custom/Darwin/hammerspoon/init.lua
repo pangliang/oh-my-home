@@ -1,0 +1,7 @@
+require("private")
+require("settings")
+require("demo")
+--require("weather")
+require("windows")
+require("apps")
+require("alfred")
