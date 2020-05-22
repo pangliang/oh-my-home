@@ -79,7 +79,7 @@ ${voffset -45}
 ${color6}${hr 1}
 ${font :size=8}${color1}KERNEL:${color}${font} ${alignr} $kernel
 ${font :size=8}${color1}UPTIME:${color}${font} ${alignr}$uptime_short
-${font :size=8}${color1}SYSTEM:${color}${font} ${alignr}${exec /usr/bin/lsb_release -sdr}
+${font :size=8}${color1}SYSTEM:${color}${font} ${alignr}${exec /usr/bin/lsb_release -sd}
 
 ${voffset -35}
 ${color6}${hr 1}
