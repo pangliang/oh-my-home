@@ -49,5 +49,4 @@ end
 
 menubar:setTitle('⌛')
 getWeather()
-updateMenubar()
-hs.timer.doEvery(3600, getWeather)
+weatherTimer = hs.timer.doEvery(3600, getWeather, true)

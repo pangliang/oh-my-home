@@ -1,7 +1,10 @@
 require("private")
 require("settings")
 require("demo")
---require("weather")
+require("weather")
 require("windows")
 require("apps")
 require("alfred")
+require("gateio")
+
+hs.loadSpoon("CircleClock")
