@@ -6,6 +6,7 @@ local plugins = plugins or {}
 
 plugins.lock = {
     title = "电脑锁屏",
+    argRequired = false,
     completionCallback = function(value)
         log.f("lock: %s", hs.inspect(value))
         hs.caffeinate.lockScreen()
@@ -70,7 +71,7 @@ local chooser = hs.chooser.new(function(chosen)
 end)
 chooser:searchSubText(true)
 
-hs.hotkey.bind({ 'ctrl' }, 'g', function()
+hs.hotkey.bind({ 'ctrl' }, 'f', function()
     chooser:placeholderText("输入指令")
     chooser:queryChangedCallback(function (queryStr)
         log.f("queryChangedCallback: %s", queryStr)

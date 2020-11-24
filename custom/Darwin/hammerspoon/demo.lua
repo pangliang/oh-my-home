@@ -10,6 +10,3 @@ hs.hotkey.bind({ 'ctrl', 'shift' }, "d", function()
     hs.notify.new({ title = "appinfo", informativeText = info }):send()
 end
 )
-
-hs.loadSpoon("CircleClock")
---hs.loadSpoon("Calendar")
