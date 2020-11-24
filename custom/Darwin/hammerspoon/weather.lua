@@ -16,11 +16,6 @@ local weaEmoji = {
     default = ''
 }
 
-function updateMenubar()
-    menubar:setTooltip("Weather Info")
-    menubar:setMenu(menuData)
-end
-
 function getWeather()
     hs.http.doAsyncRequest(urlApi, "GET", nil, nil, function(code, body, htable)
         if code ~= 200 then
@@ -43,10 +38,11 @@ function getWeather()
                 table.insert(menuData, item)
             end
         end
-        updateMenubar()
+        menubar:setMenu(menuData)
     end)
 end
 
+menubar:setTooltip("Weather Info")
 menubar:setTitle('⌛')
 getWeather()
 weatherTimer = hs.timer.doEvery(3600, getWeather, true)
